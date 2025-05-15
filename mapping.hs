@@ -1,3 +1,5 @@
+import Data.List (nub, sort)
+
 -- 写像のデータ型
 data Mapping a b = Mapping {
   apply :: a -> b,    -- 写像の本体 (関数)
@@ -14,8 +16,6 @@ data Mapping a b = Mapping {
 
 -}
 
-
-import Data.List (nub, sort)
 
 -- 単射判定
 isInjective :: (Eq b) => Mapping a b -> Bool -- 入力は「写像」型。出力は Bool型。
