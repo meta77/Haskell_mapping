@@ -42,7 +42,13 @@ let in構文の再確認
 isSurjective :: (Eq b) => Mapping a b -> Bool
 isSurjective (Mapping f dom codom) =
   let images = map f dom
-  in all (`elem` images) codom -- 「値域 codom のすべての要素が、images に含まれているか？」
+  in all (`elem` images) codom
+{-
+全射判定のロジック
+
+値域 codom のすべての要素が、images に含まれているか？
+
+-}
 
 {-
 all
