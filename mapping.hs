@@ -91,6 +91,14 @@ dupMap = Mapping {
   codomain = [1,2]
 }
 
+-- 写像例3
+zeroMap :: Mapping Int Int
+zeroMap = Mapping {
+    apply = \x = x * 0
+    domain = [1,2,3]
+    codomain = [0]
+}
+
 -- 実行例
 main :: IO ()
 main = do
