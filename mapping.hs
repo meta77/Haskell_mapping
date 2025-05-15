@@ -99,6 +99,16 @@ zeroMap = Mapping {
     codomain = [0]
 }
 
+
+-- 写像例４
+-- 平方剰余写像 f(x) = x^2 mod 7, x ∈ {0..6}
+quadraticMod7 :: Mapping Int Int
+quadraticMod7 = Mapping {
+  apply = \x -> (x * x) `mod` 7,
+  domain = [0..6],
+  codomain = [0..6]  -- ℤ/7ℤ の元
+}
+
 -- 実行例
 main :: IO ()
 main = do
