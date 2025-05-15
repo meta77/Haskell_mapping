@@ -69,6 +69,12 @@ all
 isBijective :: (Eq b) => Mapping a b -> Bool
 isBijective m = isInjective m && isSurjective m
 
+
+
+
+
+-- 写像の例
+
 -- 写像例1: 自然数 1,2,3 -> 自然数 2,4,6 (倍)
 doubleMap :: Mapping Int Int
 doubleMap = Mapping {
