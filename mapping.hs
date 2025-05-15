@@ -123,3 +123,7 @@ main = do
   putStrLn $ "zeroMapは単射か？ " ++ show (isInjective zeroMap) -- False
   putStrLn $ "zeroMapは全射か？ " ++ show (isSurjective zeroMap) -- True
   putStrLn $ "zeroMapは全単射か？ " ++ show (isBijective zeroMap) -- False
+
+  putStrLn $ "quadraticMod7は単射か？ " ++ show (isInjective quadraticMod7) -- False
+  putStrLn $ "quadraticMod7は全射か？ " ++ show (isSurjective quadraticMod7) -- True
+  putStrLn $ "quadraticMod7は全単射か？ " ++ show (isBijective quadraticMod7) -- False
