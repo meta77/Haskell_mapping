@@ -94,8 +94,8 @@ dupMap = Mapping {
 -- 写像例3
 zeroMap :: Mapping Int Int
 zeroMap = Mapping {
-    apply = \x -> x * 0
-    domain = [1,2,3]
+    apply = \x -> x * 0,
+    domain = [1,2,3],
     codomain = [0]
 }
 
