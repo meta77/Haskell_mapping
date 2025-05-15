@@ -94,7 +94,7 @@ dupMap = Mapping {
 -- 写像例3
 zeroMap :: Mapping Int Int
 zeroMap = Mapping {
-    apply = \x = x * 0
+    apply = \x -> x * 0
     domain = [1,2,3]
     codomain = [0]
 }
@@ -109,3 +109,7 @@ main = do
   putStrLn $ "dupMapは単射か？ " ++ show (isInjective dupMap) -- False
   putStrLn $ "dupMapは全射か？ " ++ show (isSurjective dupMap) -- True
   putStrLn $ "dupMapは全単射か？ " ++ show (isBijective dupMap) -- False
+
+  putStrLn $ "zeroMapは単射か？ " ++ show (isInjective zeroMap) -- False
+  putStrLn $ "zeroMapは全射か？ " ++ show (isSurjective zeroMap) -- True
+  putStrLn $ "zeroMapは全単射か？ " ++ show (isBijective zeroMap) -- False
