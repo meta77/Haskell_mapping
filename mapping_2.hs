@@ -25,6 +25,12 @@ class Mapping f where
 {-# LANGUAGE TypeFamilies #-}
 をソースコードの先頭に書く必要があります。
 
+インスタンスの作り方
+「インスタンスを定義するとき、f が持つ型情報を使って、type Domain f と type Codomain f を定義する」
+instance Mapping (a -> b) where
+  type Domain (a -> b) = a
+  type Codomain (a -> b) = b
+  apply f x = f x
 
 -}
 
