@@ -10,3 +10,8 @@ data Mapping a b = Mapping {
   domainSet :: a -> Bool,    -- 属するかどうか（∞集合でもOK）
   codomainSet :: b -> Bool   -- 値域として含まれるか
 }
+
+-- 有限写像
+data FiniteMapping a b = FiniteMapping {
+  table :: [(a, b)]
+}
