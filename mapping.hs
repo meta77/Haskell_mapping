@@ -135,3 +135,7 @@ main = do
   putStrLn $ "quadraticMod7は単射か？ " ++ show (isInjective quadraticMod7) -- False
   putStrLn $ "quadraticMod7は全射か？ " ++ show (isSurjective quadraticMod7) -- True
   putStrLn $ "quadraticMod7は全単射か？ " ++ show (isBijective quadraticMod7) -- False
+
+  putStrLn $ "identityMappingは単射か？ " ++ show (isInjective identityMapping) -- False
+  putStrLn $ "identityMappingは全射か？ " ++ show (isSurjective identityMapping) -- True
+  putStrLn $ "identityMappingは全単射か？ " ++ show (isBijective identityMapping) -- False
