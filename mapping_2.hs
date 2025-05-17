@@ -8,7 +8,7 @@ class Mapping f where
   apply :: f -> Domain f -> Codomain f
 
 {-
-型クラスの中での、typeの意味
+型クラスの中での「type」の意味
 
 「関連型（associated type）」を定義するため。
 
