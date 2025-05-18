@@ -73,6 +73,14 @@ absMapping = Mapping {
   codomainSet = (>= 0)               -- 出力は非負整数のみ
 }
 
+-- 例
+squareMapping :: Mapping Int Int
+squareMapping = Mapping {
+  apply = \n -> n * n,
+  domainSet = (>= 0),           -- 自然数（0以上の整数）
+  codomainSet = (>= 0)          -- 出力も自然数（平方は常に非負）
+}
+
 
 
 
