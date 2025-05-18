@@ -81,6 +81,13 @@ squareMapping = Mapping {
   codomainSet = (>= 0)          -- 出力も自然数（平方は常に非負）
 }
 
+-- 例
+sinMapping :: Mapping Double Double
+sinMapping = Mapping {
+  apply = sin,
+  domainSet = const True,         -- すべての実数に対して定義
+  codomainSet = \y -> y >= -1 && y <= 1  -- 結果は [-1, 1]
+}
 
 
 
