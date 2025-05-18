@@ -65,6 +65,15 @@ data Mapping a b = Mapping {
 
 -}
 
+--　例
+absMapping :: Mapping Int Int
+absMapping = Mapping {
+  apply = abs,
+  domainSet = const True,            -- すべての Int が定義域
+  codomainSet = (>= 0)               -- 出力は非負整数のみ
+}
+
+
 
 
 
