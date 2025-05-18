@@ -34,12 +34,34 @@ instance Mapping (a -> b) where
 -}
 
 
+
+
+
 -- 拡張された構造付き写像
 data Mapping a b = Mapping {
   apply     :: a -> b,
   domainSet :: a -> Bool,    -- 属するかどうか（∞集合でもOK）
   codomainSet :: b -> Bool   -- 値域として含まれるか
 }
+
+{-
+なぜ拡張版？
+
+data Mapping a b = Mapping {
+  apply   :: a -> b,
+  domain  :: [a],
+  codomain :: [b]
+}
+
+の場合、
+・domain や codomain が列挙可能な有限集合に限定される
+・無限集合（例えば自然数全体や実数区間）をうまく扱えない
+-}
+
+
+
+
+
 
 -- 有限写像
 data FiniteMapping a b = FiniteMapping {
